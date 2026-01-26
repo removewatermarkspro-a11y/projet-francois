@@ -36,20 +36,20 @@ const row2 = [reviews[1], reviews[3], reviews[5]];
 
 function ReviewCard({ text }: { text: string }) {
     return (
-        <div className="bg-[#FAF9F6] p-10 rounded-none shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-[#EBE9E4] w-[450px] md:w-[600px] flex-shrink-0 mx-6 h-full flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+        <div className="bg-[#FAF9F6] p-6 rounded-none shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-[#EBE9E4] w-[350px] md:w-[450px] flex-shrink-0 mx-6 h-full flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
             <div>
-                <div className="flex text-[#C5A086] mb-6 justify-center">
+                <div className="flex text-[#C5A086] mb-4 justify-center">
                     {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={16} fill="currentColor" className="mr-1 last:mr-0 opacity-80" />
+                        <Star key={i} size={14} fill="currentColor" className="mr-1 last:mr-0 opacity-80" />
                     ))}
                 </div>
-                <p className="text-[#4A4A4A] font-serif font-light leading-loose text-center text-lg md:text-xl italic">
+                <p className="text-[#4A4A4A] font-sans font-normal leading-relaxed text-center text-sm md:text-base">
                     "{text}"
                 </p>
             </div>
-            <div className="mt-8 pt-8 border-t border-[#EBE9E4] flex flex-col items-center">
-                <span className="text-xs font-sans tracking-[0.2em] text-[#8F4626] uppercase mb-1">Nuage Massage</span>
-                <span className="text-sm font-medium text-gray-400">Client(e) Vérifié(e)</span>
+            <div className="mt-6 pt-6 border-t border-[#EBE9E4] flex flex-col items-center">
+                <span className="text-[10px] font-sans tracking-[0.2em] text-[#8F4626] uppercase mb-1">Nuage Massage</span>
+                <span className="text-xs font-medium text-gray-400">Client(e) Vérifié(e)</span>
             </div>
         </div>
     );
