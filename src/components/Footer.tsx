@@ -6,7 +6,7 @@ export function Footer() {
         <footer className="bg-sage-50 py-12 border-t border-sage-100">
             <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="text-center md:text-left">
-                    <h3 className="font-serif text-xl font-bold mb-2">François<span className="text-sage-400">.</span></h3>
+                    <h3 className="font-serif text-xl font-bold mb-2">Nuage Massage<span className="text-sage-400">.</span></h3>
                     <p className="text-sm text-gray-500">Masseur Professionnel & Bien-être</p>
                 </div>
 
@@ -17,7 +17,7 @@ export function Footer() {
                 </div>
 
                 <div className="text-xs text-gray-400">
-                    © {new Date().getFullYear()} François Massage. Tous droits réservés.
+                    © {new Date().getFullYear()} Nuage Massage. Tous droits réservés.
                 </div>
             </div>
         </footer>

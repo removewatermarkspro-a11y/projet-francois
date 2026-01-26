@@ -45,53 +45,55 @@ export function Header() {
     const isScrolledState = scrolled || !isHome;
 
     return (
-        <header
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
-                isScrolledState ? "py-3 bg-[#5A6C58]/95 backdrop-blur-md shadow-lg" : "py-6 bg-gradient-to-b from-black/20 to-transparent"
-            )}
-        >
-            <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                {/* Logo - Made Bigger */}
-                <Link href="/" className="relative w-56 h-24 md:w-80 md:h-28 transition-transform hover:scale-105">
-                    <Image
-                        src="/logo.png"
-                        alt="Nuage Nuage Nuage"
-                        fill
-                        className="object-contain object-left md:object-center" // Ensure alignment
-                        priority
-                    />
-                </Link>
+        <>
+            <header
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
+                    isScrolledState ? "py-3 bg-[#5A6C58]/95 backdrop-blur-md shadow-lg" : "py-6 bg-gradient-to-b from-black/20 to-transparent"
+                )}
+            >
+                <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+                    {/* Logo - Made Bigger */}
+                    <Link href="/" className="relative w-56 h-24 md:w-80 md:h-28 transition-transform hover:scale-105">
+                        <Image
+                            src="/logo.png"
+                            alt="Nuage Nuage Nuage"
+                            fill
+                            className="object-contain object-left md:object-center" // Ensure alignment
+                            priority
+                        />
+                    </Link>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-xs font-sans font-bold tracking-[0.2em] text-white hover:text-white/80 transition-colors uppercase"
+                    {/* Desktop Nav */}
+                    <nav className="hidden md:flex items-center gap-8">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="text-xs font-sans font-bold tracking-[0.2em] text-white hover:text-white/80 transition-colors uppercase"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                        <Button
+                            size="sm"
+                            className="rounded-full px-8 bg-white/10 backdrop-blur border border-white/30 text-white hover:bg-white hover:text-[#5A6C58]"
+                            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
                         >
-                            {link.label}
-                        </Link>
-                    ))}
-                    <Button
-                        size="sm"
-                        className="rounded-full px-8 bg-white/10 backdrop-blur border border-white/30 text-white hover:bg-white hover:text-[#5A6C58]"
-                        onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-                    >
-                        Réserver
-                    </Button>
-                </nav>
+                            Réserver
+                        </Button>
+                    </nav>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden p-2 text-white"
-                    onClick={() => setIsOpen(!isOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-                </button>
-            </div>
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden p-2 text-white"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                    </button>
+                </div>
+            </header>
 
             {/* Mobile Nav */}
             <AnimatePresence>
@@ -131,6 +133,6 @@ export function Header() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </header>
+        </>
     );
 }

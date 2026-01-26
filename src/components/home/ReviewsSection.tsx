@@ -26,7 +26,7 @@ const reviews = [
         id: 5,
     },
     {
-        text: "Super expérience, surtout pour une novice du massage. Belle mise en confiance, approche très consciencieuse et professionnelle. François s’adapte de manière intuitive et assez impressionnante aux besoins et particularités !! Merci encore - je souffle enfin :) Et je recommande !!!",
+        text: "Je recommande Nuage massage les yeux fermés ! François est un excellent masseur, mais en plus de la technique il est aussi très apaisant, gentil et à l'écoute. Il prend le temps de personnaliser le massage en fonction de nos envies, de nos besoins et de notre état psychologique du moment. J'étais très impressionnée par la sensation de bien-être (physique et mentale) que j'ai ressenti en sortant, et qui reste durablement. Merci !",
         id: 6,
     }
 ];
@@ -36,22 +36,20 @@ const row2 = [reviews[1], reviews[3], reviews[5]];
 
 function ReviewCard({ text }: { text: string }) {
     return (
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-[400px] md:w-[500px] flex-shrink-0 mx-4 h-full flex flex-col justify-between">
+        <div className="bg-[#FAF9F6] p-10 rounded-none shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-[#EBE9E4] w-[450px] md:w-[600px] flex-shrink-0 mx-6 h-full flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
             <div>
-                <div className="flex text-[#D4AF37] mb-4">
+                <div className="flex text-[#C5A086] mb-6 justify-center">
                     {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={18} fill="currentColor" className="mr-1" />
+                        <Star key={i} size={16} fill="currentColor" className="mr-1 last:mr-0 opacity-80" />
                     ))}
                 </div>
-                <p className="text-gray-600 font-sans font-light leading-relaxed italic text-sm md:text-base">
+                <p className="text-[#4A4A4A] font-serif font-light leading-loose text-center text-lg md:text-xl italic">
                     "{text}"
                 </p>
             </div>
-            <div className="mt-6 pt-6 border-t border-gray-100 flex items-center">
-                <div className="w-8 h-8 rounded-full bg-[#EBE9E4] flex items-center justify-center text-[#5A6C58] font-bold text-xs mr-3">
-                    C
-                </div>
-                <span className="text-sm font-medium text-gray-500">Client(e) Nuage Massage</span>
+            <div className="mt-8 pt-8 border-t border-[#EBE9E4] flex flex-col items-center">
+                <span className="text-xs font-sans tracking-[0.2em] text-[#8F4626] uppercase mb-1">Nuage Massage</span>
+                <span className="text-sm font-medium text-gray-400">Client(e) Vérifié(e)</span>
             </div>
         </div>
     );
