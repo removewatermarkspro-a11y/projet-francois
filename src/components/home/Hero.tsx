@@ -41,7 +41,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-white/90 mb-12 font-light max-w-2xl mx-auto tracking-wide font-sans"
                 >
-                    Nuage Nuage : La légèreté retrouvée, au coeur de notre métier.
+                    Nuage Nuage : La légèreté retrouvée, au coeur de mon métier.
                 </motion.p>
 
                 <motion.div
@@ -55,7 +55,7 @@ export function Hero() {
                             size="lg"
                             className="bg-[#5A6C58] hover:bg-[#4A5848] text-white border-none text-sm md:text-base tracking-widest uppercase rounded-full min-w-[260px]"
                         >
-                            Découvrez nos massages
+                            Découvrez mes massages
                         </Button>
                     </Link>
 

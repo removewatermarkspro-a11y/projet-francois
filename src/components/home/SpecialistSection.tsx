@@ -14,37 +14,24 @@ export function SpecialistSection() {
                 {/* Text Content - Left Side */}
                 <div className="flex flex-col justify-center p-12 md:p-20 order-2 md:order-1">
                     <span className="text-gray-500 font-sans tracking-widest uppercase text-xs mb-6 block">
-                        Nos Spécialistes
+                        Votre Praticien
                     </span>
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2C2C2C] mb-8 leading-[1.1]">
                         Votre bien-être <br /> entre des mains <span className="text-[#8F4626]">expertes</span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-light leading-relaxed max-w-md">
                         Avec des années d'expérience et une passion pour le bien-être,
-                        chaque membre de notre équipe est hautement qualifié dans une variété
+                        je mets à votre service une expertise qualifiée dans une variété
                         de techniques thérapeutiques.
                     </p>
 
                     <Link href="/about">
                         <Button className="bg-[#8F4626] hover:bg-[#7A3A1E] text-white rounded-full px-10 py-6 text-lg w-fit">
-                            Rencontrer l'équipe
+                            Mon parcours
                         </Button>
                     </Link>
 
-                    <div className="mt-12 flex gap-4">
-                        {/* Team Avatars Placeholder */}
-                        <div className="flex -space-x-4">
-                            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative">
-                                <Image src="/samuel.jpg" fill alt="Team 1" className="object-cover" />
-                            </div>
-                            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative">
-                                <Image src="/jeanne.jpg" fill alt="Team 2" className="object-cover" />
-                            </div>
-                            <div className="w-12 h-12 rounded-full border-2 border-white overflow-hidden relative">
-                                <Image src="/service-4.jpg" fill alt="Team 3" className="object-cover" />
-                            </div>
-                        </div>
-                    </div>
+                    {/* Avatars removed as requested (single practitioner) */}
                 </div>
 
                 {/* Image - Right Side */}
@@ -54,6 +41,7 @@ export function SpecialistSection() {
                         src="/service-7.jpg"
                         alt="Soin visage nature"
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover hover:scale-105 transition-transform duration-1000 ease-out"
                     />
                 </div>

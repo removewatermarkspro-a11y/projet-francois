@@ -20,13 +20,15 @@ export default function AboutPage() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+                        className="relative h-[400px] w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl"
                     >
                         {/* Updated to francois.jpg as requested */}
                         <Image
                             src="/francois.jpg"
                             alt="François - Masseur"
                             fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover"
                         />
                     </motion.div>
@@ -51,8 +53,7 @@ export default function AboutPage() {
                                 poussé par une fascination pour la capacité du corps à s'auto-guérir lorsqu'il est écouté.
                             </p>
                             <p>
-                                Diplômé des plus grandes écoles de massage (Institut de Masso-Kinésithérapie, Formation Spécialisée aux Techniques Orientales),
-                                j'ai développé une approche unique qui mêle précision technique et intuition.
+                                Au fil des années, j'ai développé une approche unique qui mêle précision technique et intuition.
                             </p>
                             <p>
                                 Pour moi, chaque massage est une conversation silencieuse. Je n'applique pas simplement une routine ;
