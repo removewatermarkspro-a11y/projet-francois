@@ -41,7 +41,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-white/90 mb-12 font-light max-w-2xl mx-auto tracking-wide font-sans"
                 >
-                    Nuage Nuage : La légèreté retrouvée, au coeur de mon métier.
+                    Nuage Massage : La légèreté retrouvée, au coeur de notre métier.
                 </motion.p>
 
                 <motion.div
