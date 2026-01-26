@@ -1,0 +1,58 @@
+"use client";
+
+import React from "react";
+import { Section } from "@/components/ui/Section";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+export function Philosophy() {
+    return (
+        <Section className="bg-sand-50">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500"
+                >
+                    <Image
+                        src="/samuel.jpg"
+                        alt="Masseur en action"
+                        fill
+                        className="object-cover"
+                    />
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="md:pl-10"
+                >
+                    <span className="text-sage-500 font-bold tracking-widest uppercase text-xs mb-4 block">
+                        Philosophie
+                    </span>
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-8 leading-tight">
+                        Une approche <span className="text-sage-400 italic">holistique</span> du soin
+                    </h2>
+                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Mon approche du massage va au-delà de la simple détente musculaire.
+                        Je considère chaque séance comme un voyage sensoriel unique, adapté à vos besoins
+                        spécifiques du moment.
+                    </p>
+                    <p className="text-gray-600 mb-10 leading-relaxed text-lg">
+                        Alliant techniques ancestrales et savoir-faire moderne, je m&apos;efforce de
+                        créer un espace de confiance où le lâcher-prise devient naturel.
+                        Écoute, respect et bienveillance sont les piliers de ma pratique.
+                    </p>
+
+                    <div className="pl-6 border-l-4 border-sage-400 italic text-gray-700 text-xl font-serif">
+                        &quot;Le corps ne ment jamais, il garde en mémoire nos émotions. Le massage permet de libérer ces mémoires.&quot;
+                    </div>
+                </motion.div>
+            </div>
+        </Section>
+    );
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette */
+  --color-background: #FDFBF7;
+  --color-foreground: #2C2C2C;
+  --color-primary: #5A6C58;
+  --color-primary-light: #728570;
+  --color-primary-dark: #3E4B3D;
+  --color-terracotta: #D17A4A;
+  --color-menu-bg: #4A5848;
+  --color-offwhite: #FDFBF7;
+
+  /* Fonts - Ensure these match layout.tsx variables */
+  --font-serif: var(--font-italiana), serif;
+  --font-sans: var(--font-manrope), sans-serif;
+
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    /* Default to Sans */
+  }
+
+  /* Force Serif on headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif) !important;
+    font-weight: 400;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
