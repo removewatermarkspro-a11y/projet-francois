@@ -49,12 +49,12 @@ export function Header() {
             <header
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
-                    isScrolledState ? "py-3 bg-[#5A6C58]/95 backdrop-blur-md shadow-lg" : "py-6 bg-gradient-to-b from-black/20 to-transparent"
+                    isScrolledState ? "py-2 bg-terre shadow-lg" : "py-6 bg-gradient-to-b from-black/20 to-transparent"
                 )}
             >
                 <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                     {/* Logo - Made Bigger */}
-                    <Link href="/" className="relative w-56 h-24 md:w-80 md:h-28 transition-transform hover:scale-105">
+                    <Link href="/" className="relative w-56 h-24 md:w-60 md:h-20 transition-transform hover:scale-105">
                         <Image
                             src="/logo.png"
                             alt="Nuage Nuage Nuage"
@@ -75,9 +75,15 @@ export function Header() {
                                 {link.label}
                             </Link>
                         ))}
+                        <a
+                            href="tel:0699420464"
+                            className="text-xs font-sans font-bold tracking-[0.2em] text-white hover:text-white/80 transition-colors uppercase"
+                        >
+                            06 99 42 04 64
+                        </a>
                         <Button
                             size="sm"
-                            className="rounded-full px-8 bg-white/10 backdrop-blur border border-white/30 text-white hover:bg-white hover:text-[#5A6C58]"
+                            className="rounded-full px-8 bg-white/10 backdrop-blur border border-white/30 text-white hover:bg-white hover:text-[#8F4626]"
                             onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
                         >
                             Réserver
@@ -102,7 +108,7 @@ export function Header() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="md:hidden fixed inset-0 z-[100] flex flex-col pt-32 bg-[#5A6C58] overflow-y-auto" // Added overflow-y-auto for menu content scrolling if needed
+                        className="md:hidden fixed inset-0 z-[100] flex flex-col pt-32 bg-terre overflow-y-auto" // Added overflow-y-auto for mobile menu content scrolling
                     >
                         <div className="container mx-auto px-4 flex flex-col gap-8 items-center text-center pb-20">
                             {navLinks.map((link) => (
@@ -115,9 +121,15 @@ export function Header() {
                                     {link.label}
                                 </Link>
                             ))}
+                            <a
+                                href="tel:0699420464"
+                                className="font-serif text-2xl text-white hover:text-white/80 mt-2"
+                            >
+                                06 99 42 04 64
+                            </a>
                             <Button
                                 size="lg"
-                                className="mt-4 rounded-full px-10 text-base bg-white text-[#5A6C58] hover:bg-gray-100"
+                                className="mt-4 rounded-full px-10 text-base bg-white text-[#8F4626] hover:bg-gray-100"
                                 onClick={() => { setIsOpen(false); document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" }); }}
                             >
                                 Réserver

@@ -4,11 +4,12 @@
   /* Palette */
   --color-background: #FDFBF7;
   --color-foreground: #2C2C2C;
-  --color-primary: #5A6C58;
-  --color-primary-light: #728570;
-  --color-primary-dark: #3E4B3D;
+  --color-primary: #8F4626;
+  /* Earth Color */
+  --color-primary-light: #A65D3D;
+  --color-primary-dark: #6D321A;
   --color-terracotta: #D17A4A;
-  --color-menu-bg: #4A5848;
+  --color-menu-bg: #8F4626;
   --color-offwhite: #FDFBF7;
 
   /* Fonts - Ensure these match layout.tsx variables */
@@ -35,6 +36,14 @@
   h6 {
     font-family: var(--font-serif) !important;
     font-weight: 400;
+  }
+
+  /* Utility to use the Earth Texture */
+  .bg-terre {
+    background-image: url('/fond-terre.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 

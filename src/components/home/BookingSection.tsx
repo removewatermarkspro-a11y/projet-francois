@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function BookingSection() {
     return (
-        <Section id="booking" className="bg-[#5A6C58] py-24">
+        <Section id="booking" className="bg-terre py-24">
             <div className="text-center max-w-3xl mx-auto mb-12">
                 <span className="text-white/70 font-sans font-medium tracking-[0.2em] uppercase text-xs mb-4 block">
                     Rendez-vous
@@ -28,7 +28,7 @@ export function BookingSection() {
       */}
             <div className="w-full max-w-5xl mx-auto h-[750px] relative overflow-hidden">
                 <InlineWidget
-                    url="https://calendly.com/apollinairechemla/30min"
+                    url="https://calendly.com/nuagemassage1/30min"
                     styles={{
                         height: '750px',
                         width: '100%',
@@ -39,7 +39,7 @@ export function BookingSection() {
                         backgroundColor: 'ffffff', // White background card
                         hideEventTypeDetails: false,
                         hideLandingPageDetails: false,
-                        primaryColor: '5A6C58', // Green buttons
+                        primaryColor: '8F4626', // Earth buttons
                         textColor: '2C2C2C'     // Dark text
                     }}
                 />

@@ -14,8 +14,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "primary", size = "md", isLoading, children, ...props }, ref) => {
 
         const variants = {
-            primary: "bg-primary text-white hover:bg-primary-light border-transparent shadow-sm",
-            secondary: "bg-sage-400 text-white hover:bg-sage-500 border-transparent shadow-sm",
+            primary: "bg-terre text-white border-transparent shadow-lg hover:shadow-xl hover:brightness-110",
+            secondary: "bg-[#D17A4A] text-white hover:bg-[#8F4626] border-transparent shadow-sm",
             outline: "bg-transparent border-current text-primary hover:bg-sand-50",
             ghost: "bg-transparent text-primary hover:bg-gray-50 border-transparent",
         };
@@ -31,7 +31,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 disabled={isLoading || props.disabled}
                 className={cn(
-                    "inline-flex items-center justify-center rounded-full font-serif font-medium transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sage-400 disabled:opacity-50 disabled:cursor-not-allowed border hover:scale-105 active:scale-95 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]",
+                    "inline-flex items-center justify-center rounded-full font-serif font-medium transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8F4626] disabled:opacity-50 disabled:cursor-not-allowed border hover:scale-105 active:scale-95 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]",
                     variants[variant],
                     sizes[size],
                     className

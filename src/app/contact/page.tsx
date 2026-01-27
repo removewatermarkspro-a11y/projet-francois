@@ -10,7 +10,7 @@ export default function ContactPage() {
         <main className="min-h-screen flex flex-col pt-20">
             <Header />
 
-            <Section className="bg-sage-50">
+            <Section className="bg-[#FDFBF7]">
                 <div className="text-center max-w-3xl mx-auto">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6">
                         Contact & Accès
@@ -31,31 +31,31 @@ export default function ContactPage() {
 
                         <div className="space-y-8">
                             <div className="flex items-start gap-4">
-                                <MapPin className="w-6 h-6 text-sage-500 mt-1" />
+                                <MapPin className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">Cabinet François Massage</h3>
-                                    <p className="text-gray-600">12 Rue de la Paix<br />75002 Paris</p>
+                                    <h3 className="font-semibold text-gray-900">Zone d'intervention</h3>
+                                    <p className="text-gray-600">Paris et banlieue<br />(Déplacement à domicile)</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <Phone className="w-6 h-6 text-sage-500 mt-1" />
+                                <Phone className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Téléphone</h3>
-                                    <p className="text-gray-600">+33 6 12 34 56 78</p>
+                                    <p className="text-gray-600">06 99 42 04 64</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <Mail className="w-6 h-6 text-sage-500 mt-1" />
+                                <Mail className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Email</h3>
-                                    <p className="text-gray-600">contact@francois-massage.fr</p>
+                                    <p className="text-gray-600">nuagemassage1@gmail.com</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
-                                <Clock className="w-6 h-6 text-sage-500 mt-1" />
+                                <Clock className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Horaires</h3>
                                     <p className="text-gray-600">Lundi - Samedi : 09h00 - 20h00<br />Dimanche : Fermé</p>
@@ -64,8 +64,18 @@ export default function ContactPage() {
                         </div>
 
                         {/* Map Placeholder */}
-                        <div className="mt-8 h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
-                            Map Integration (Google Maps)
+                        <div className="mt-8 h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 relative overflow-hidden">
+                            {/* Simple Placeholder for Map */}
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                                src="https://maps.google.com/maps?q=Paris%2C%20France&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                                title="Carte Paris"
+                            ></iframe>
                         </div>
                     </div>
 

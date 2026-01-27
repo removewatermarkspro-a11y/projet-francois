@@ -41,16 +41,16 @@ export function PromoPopup() {
                     animate={{ scale: 1, opacity: 1, y: 0 }}
                     exit={{ scale: 0.9, opacity: 0, y: 20 }}
                     transition={{ type: "spring", duration: 0.6 }}
-                    className="relative bg-[#FDFBF7] w-full max-w-md p-8 rounded-2xl shadow-2xl border border-[#5A6C58]/20 text-center overflow-hidden"
+                    className="relative bg-[#FDFBF7] w-full max-w-md p-8 rounded-2xl shadow-2xl border border-[#8F4626]/20 text-center overflow-hidden"
                 >
                     {/* Background Decoration */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-[#5A6C58]" />
+                    <div className="absolute top-0 left-0 w-full h-2 bg-[#8F4626]" />
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#D17A4A]/10 rounded-full blur-2xl" />
-                    <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#5A6C58]/10 rounded-full blur-2xl" />
+                    <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#8F4626]/10 rounded-full blur-2xl" />
 
                     <button
                         onClick={() => setIsOpen(false)}
-                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-[#5A6C58] transition-colors"
+                        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-[#8F4626] transition-colors"
                         aria-label="Fermer"
                     >
                         <X className="w-6 h-6" />
@@ -58,7 +58,7 @@ export function PromoPopup() {
 
 
 
-                    <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-[#5A6C58] mb-2 block">
+                    <span className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-[#8F4626] mb-2 block">
                         Offre de Bienvenue
                     </span>
 
@@ -74,7 +74,7 @@ export function PromoPopup() {
                     <div className="flex flex-col gap-3">
                         <Button
                             size="lg"
-                            className="w-full bg-[#5A6C58] hover:bg-[#4A5848] text-white rounded-full"
+                            className="w-full bg-[#8F4626] hover:bg-[#6D321A] text-white rounded-full"
                             onClick={() => {
                                 setIsOpen(false);
                                 document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });

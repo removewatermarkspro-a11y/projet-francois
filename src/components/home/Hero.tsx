@@ -53,7 +53,7 @@ export function Hero() {
                     <Link href="/services">
                         <Button
                             size="lg"
-                            className="bg-[#5A6C58] hover:bg-[#4A5848] text-white border-none text-sm md:text-base tracking-widest uppercase rounded-full min-w-[260px]"
+                            className="bg-terre hover:brightness-110 text-white border-none text-sm md:text-base tracking-widest uppercase rounded-full min-w-[260px]"
                         >
                             Découvrez mes massages
                         </Button>
@@ -61,7 +61,7 @@ export function Hero() {
 
                     <Button
                         size="lg"
-                        className="bg-[#5A6C58] hover:bg-[#4A5848] text-white border-none text-sm md:text-base tracking-widest uppercase rounded-full min-w-[260px]"
+                        className="bg-terre hover:brightness-110 text-white border-none text-sm md:text-base tracking-widest uppercase rounded-full min-w-[260px]"
                         onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
                     >
                         Réserver

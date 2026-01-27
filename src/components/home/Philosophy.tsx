@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function Philosophy() {
     return (
-        <Section className="bg-sand-50">
+        <Section className="bg-[#FDFBF7]">
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -31,25 +31,22 @@ export function Philosophy() {
                     transition={{ duration: 0.8 }}
                     className="md:pl-10"
                 >
-                    <span className="text-sage-500 font-bold tracking-widest uppercase text-xs mb-4 block">
+                    <span className="text-[#8F4626] font-bold tracking-widest uppercase text-xs mb-4 block">
                         Philosophie
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-8 leading-tight">
-                        Une approche <span className="text-sage-400 italic">holistique</span> du soin
+                        Une approche <span className="text-[#A65D3D] italic">holistique</span> du soin
                     </h2>
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                        Mon approche du massage va au-delà de la simple détente musculaire.
-                        Je considère chaque séance comme un voyage sensoriel unique, adapté à vos besoins
-                        spécifiques du moment.
+                        Tout le monde a un rapport unique à son corps, une problématique musculaire, des tensions ciblées,
+                        un besoin de lâcher prise à cause d’un stress trop intense ou encore effectuer un rééquilibrage énergétique.
                     </p>
                     <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                        Alliant techniques ancestrales et savoir-faire moderne, je m&apos;efforce de
-                        créer un espace de confiance où le lâcher-prise devient naturel.
-                        Écoute, respect et bienveillance sont les piliers de ma pratique.
+                        Mes prestations sont un échange entre vous et moi, ma pratique, mon savoir, mes intuitions et vos besoins, vos attentes.
                     </p>
 
-                    <div className="pl-6 border-l-4 border-sage-400 italic text-gray-700 text-xl font-serif">
-                        &quot;Le corps ne ment jamais, il garde en mémoire nos émotions. Le massage permet de libérer ces mémoires.&quot;
+                    <div className="pl-6 border-l-4 border-[#8F4626] italic text-gray-700 text-xl font-serif">
+                        &quot;Se faire masser c’est aussi une hygiène de vie. Il s’agit d’accorder de l’importance à son bien-être physique et mental.&quot;
                     </div>
                 </motion.div>
             </div>

@@ -7,65 +7,53 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Sparkles, Zap, Waves, Feather, Heart, Cloud } from "lucide-react";
+import { Heart, Sparkles, Zap } from "lucide-react"; // Selected icons
 import { BookingSection } from "@/components/home/BookingSection";
 
-// Updated data with imported images
-const allServices = [
+// Updated Service Categories
+const serviceCategories = [
   {
-    title: "Massage Suédois",
-    description: "Le grand classique. Une détente musculaire profonde pour évacuer le stress et les tensions du quotidien.",
-    benefits: ["Relâchement musculaire", "Amélioration de la circulation", "Réduction du stress"],
-    price: "80€",
-    duration: "60 min",
-    icon: Sparkles,
-    image: "/service-1.jpg"
+    title: "Massage Musculaire",
+    description: "Musculaire, récupération sportive, apaisement des tensions et nœuds, traitement des fascias, souplesse et libération articulaire, accompagnement sportif, drainage musculaire.",
+    pricing: "75€ / 90€ / 105€",
+    duration: "1h / 1h15 / 1h30",
+    image: "/service-1.jpg", // Using existing images remapped
+    icon: Zap
   },
   {
-    title: "Deep Tissue",
-    description: "Idéal pour les sportifs ou les tensions chroniques. Ce soin cible les couches profondes des muscles et fascias.",
-    benefits: ["Récupération sportive", "Dénouement des tensions", "Mobilité accrue"],
-    price: "90€",
-    duration: "60 min",
-    icon: Zap,
-    image: "/service-2.jpg"
+    title: "Massage Relaxant",
+    description: "Relaxant, enveloppement, détente psychique et mentale, focus sur le lâcher prise et la restauration du capital fatigue, apaisement du stress et des angoisses.",
+    pricing: "75€ / 90€ / 105€",
+    duration: "1h / 1h15 / 1h30",
+    image: "/service-2.jpg",
+    icon: Heart
   },
   {
-    title: "Lomi Lomi",
-    description: "Un massage hawaïen fluide et rythmé, utilisant les avant-bras pour un effet cocon enveloppant.",
-    benefits: ["Harmonie corps-esprit", "Circulation énergétique", "Sensation d'enveloppement"],
-    price: "85€",
-    duration: "60 min",
-    icon: Waves,
-    image: "/service-3.jpg"
-  },
-  {
-    title: "Massage Californien",
-    description: "Doux et enveloppant, il privilégie les grands mouvements lents pour une relaxation psychocorporelle.",
-    benefits: ["Apaisement nerveux", "Prise de conscience corporelle", "Douceur extrême"],
-    price: "80€",
-    duration: "60 min",
-    icon: Feather,
-    image: "/service-4.jpg"
-  },
-  {
-    title: "Réflexologie Plantaire",
-    description: "Stimulation des zones réflexes des pieds pour rétablir l'équilibre énergétique de tout le corps.",
-    benefits: ["Détoxification", "Relaxation profonde", "Revitalisation"],
-    price: "60€",
-    duration: "45 min",
-    icon: Cloud,
-    image: "/service-5.jpg"
-  },
-  {
-    title: "Massage Duo",
-    description: "Partagez un moment de complicité et de détente à deux. Le même soin de qualité, ensemble.",
-    benefits: ["Moment partagé", "Complicité", "Détente simultanée"],
-    price: "150€",
-    duration: "60 min",
-    icon: Heart,
-    image: "/service-6.jpg"
-  },
+    title: "Massage Énergétique",
+    description: "Énergétique, rééquilibrage énergétique, drainage des toxines, meilleure circulation sanguine et oxygénation du corps.",
+    pricing: "75€ / 90€ / 105€",
+    duration: "1h / 1h15 / 1h30",
+    image: "/service-3.jpg",
+    icon: Sparkles
+  }
+];
+
+// Techniques List
+const techniques = [
+  "Californien", "Suédois", "Thaïlandais traditionnel", "Réflexologie plantaire",
+  "Prénatal", "Deep tissu", "Abhyanga", "Drainage"
+];
+
+const pricings = [
+  { duration: "1h", price: "75€" },
+  { duration: "1h15", price: "90€" },
+  { duration: "1h30", price: "105€" },
+];
+
+const packages = [
+  { duration: "3h", price: "200€", unite: "67€/h" },
+  { duration: "5h", price: "320€", unite: "64€/h" },
+  { duration: "7h", price: "425€", unite: "61€/h" },
 ];
 
 export default function ServicesPage() {
@@ -73,23 +61,40 @@ export default function ServicesPage() {
     <main className="min-h-screen flex flex-col pt-20 bg-[#FDFBF7]">
       <Header />
 
-      <Section className="bg-[#5A6C58] py-20 text-white">
+      {/* Hero Section */}
+      <Section className="bg-terre py-20 text-white">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-white/70 font-sans font-medium tracking-[0.2em] uppercase text-xs mb-4 block">
             Notre Carte
           </span>
           <h1 className="text-5xl md:text-6xl font-serif mb-6">
-            La Carte des Soins
+            Prestations Sur Mesure
           </h1>
           <p className="text-lg text-white/90 font-light font-sans max-w-xl mx-auto">
-            Découvrez une gamme complète de massages conçus pour répondre à vos besoins spécifiques.
+            Trois grands types de massage adaptés à vos besoins.
           </p>
         </div>
       </Section>
 
+      {/* Techniques Note */}
+      <Section className="py-12 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-500 font-sans text-sm uppercase tracking-widest mb-4">Sur la base des techniques suivantes</p>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#8F4626] font-serif text-xl">
+            {techniques.map((tech, i) => (
+              <span key={i} className="relative">
+                {tech}
+                {i < techniques.length - 1 && <span className="ml-6 text-gray-300">•</span>}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Services Grid */}
       <Section>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {allServices.map((service, index) => (
+        <div className="grid md:grid-cols-3 gap-10">
+          {serviceCategories.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -110,45 +115,100 @@ export default function ServicesPage() {
               </div>
 
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-3xl font-serif text-[#2C2C2C] group-hover:text-[#5A6C58] transition-colors">
-                    {service.title}
-                  </h3>
-                </div>
+                <h3 className="text-3xl font-serif text-[#2C2C2C] mb-4 group-hover:text-[#8F4626] transition-colors">
+                  {service.title}
+                </h3>
 
-                <p className="text-gray-600 mb-6 font-sans text-sm leading-relaxed flex-grow">
+                <p className="text-gray-600 mb-8 font-sans text-sm leading-relaxed flex-grow">
                   {service.description}
                 </p>
 
-                <div className="mb-6 border-t border-gray-100 pt-4">
-                  <h4 className="text-xs font-bold text-gray-900 mb-2 uppercase tracking-wide">Bénéfices</h4>
-                  <ul className="text-sm text-gray-500 space-y-1">
-                    {service.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <span className="w-1 h-1 bg-[#5A6C58] rounded-full" /> {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between mt-auto pt-4">
-                  <div className="flex gap-4 text-[#2C2C2C] font-semibold font-sans">
-                    <span>{service.price}</span>
-                    <span className="text-gray-400 font-normal">|</span>
-                    <span>{service.duration}</span>
+                <div className="mt-auto border-t border-gray-100 pt-6">
+                  <div className="flex justify-between items-center text-[#2C2C2C] font-semibold font-sans mb-4">
+                    <span>A partir de 75€</span>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="text-[#8F4626] hover:text-[#3E4B3D] p-0 hover:bg-transparent tracking-widest uppercase text-xs font-bold"
+                      onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+                    >
+                      Réserver
+                    </Button>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="text-[#5A6C58] hover:text-[#3E4B3D] p-0 hover:bg-transparent tracking-widest uppercase text-xs font-bold"
-                    onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-                  >
-                    Réserver
-                  </Button>
                 </div>
               </div>
             </motion.div>
           ))}
+        </div>
+      </Section>
+
+      {/* Pricing & Logistics Section */}
+      <Section className="bg-[#EBE9E4]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+            {/* Standard Rates Card */}
+            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-10 transition-transform hover:scale-[1.01] duration-500">
+              <h3 className="text-3xl font-serif text-[#8F4626] mb-8 font-bold">Tarifs à la séance</h3>
+              <div className="space-y-6">
+                {pricings.map((item, i) => (
+                  <div key={i} className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <span className="text-xl text-[#2C2C2C] font-serif font-medium">{item.duration}</span>
+                    <span className="text-3xl text-[#8F4626] font-bold">{item.price}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 p-6 bg-[#FDFBF7] rounded-xl border border-[#8F4626]/20">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-[#8F4626]/10 rounded-full text-[#8F4626]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" /><circle cx="7" cy="17" r="2" /><path d="M9 17h6" /><circle cx="17" cy="17" r="2" /></svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#2C2C2C] mb-1 font-serif text-lg">Déplacement à domicile</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Je me déplace avec mon futon (ou sur votre table/tapis).
+                      <br />
+                      <span className="text-[#8F4626] font-bold mt-1 block text-base">+10 euros par déplacement.</span>
+                      <span className="text-xs text-gray-400 mt-2 block">Je ne reçois plus à mon domicile pour le moment.</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Packages Card */}
+            <div className="bg-white rounded-2xl shadow-sm p-8 md:p-10 transition-transform hover:scale-[1.01] duration-500 flex flex-col">
+              <h3 className="text-3xl font-serif text-[#8F4626] mb-4 font-bold">Forfaits</h3>
+              <p className="text-gray-500 mb-8 italic text-sm border-l-4 border-[#D17A4A] pl-4 py-1 bg-gray-50 rounded-r-lg">
+                Valables 6 mois, non nominatifs (partageables avec vos proches), et divisibles comme vous le souhaitez.
+              </p>
+              <div className="space-y-6 flex-grow">
+                {packages.map((pkg, i) => (
+                  <div key={i} className="flex justify-between items-center border-b border-gray-100 pb-4 group hover:bg-[#FDFBF7] transition-colors rounded-lg px-2 -mx-2">
+                    <span className="text-xl text-[#2C2C2C] font-serif font-medium">{pkg.duration}</span>
+                    <div className="text-right">
+                      <span className="text-3xl text-[#8F4626] font-bold block group-hover:scale-110 transition-transform origin-right">{pkg.price}</span>
+                      <span className="text-xs text-gray-400 font-medium">soit {pkg.unite}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Reserve Button for Packages (Optional, just visual balance) */}
+              <div className="mt-8 pt-6 text-center border-t border-gray-100">
+                <p className="text-sm text-gray-400 mb-4">Envie de commencer un suivi régulier ?</p>
+                <Button
+                  onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+                  variant="primary"
+                  className="w-full bg-terre"
+                >
+                  Réserver un forfait
+                </Button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </Section>
 

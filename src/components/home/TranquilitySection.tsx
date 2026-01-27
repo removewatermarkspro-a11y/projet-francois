@@ -18,7 +18,7 @@ export function TranquilitySection() {
                     </span>
                     <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] mb-8 leading-tight">
                         Où la tranquillité <br />
-                        <span className="block mt-2">rencontre le <span className="italic text-[#5A6C58]">bien-être</span></span>
+                        <span className="block mt-2">rencontre le <span className="italic text-[#8F4626]">bien-être</span></span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-light leading-relaxed max-w-2xl mx-auto">
                         Avec une attention particulière portée à la relaxation et au rajeunissement,
@@ -26,7 +26,7 @@ export function TranquilitySection() {
                         et l'harmonie de votre corps et de votre esprit.
                     </p>
                     <Link href="/about">
-                        <Button className="bg-[#8F4626] hover:bg-[#7A3A1E] text-white rounded-full px-10 py-6 text-lg">
+                        <Button className="bg-gradient-to-r from-[#8F4626] to-[#A65D3D] hover:from-[#7A3A1E] hover:to-[#8F4626] text-white rounded-full px-10 py-6 text-lg shadow-lg">
                             En savoir plus
                         </Button>
                     </Link>
