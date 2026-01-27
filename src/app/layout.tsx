@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Italiana, Manrope } from "next/font/google";
 import "./globals.css";
-import { PromoPopup } from "@/components/ui/PromoPopup";
+
 
 const italiana = Italiana({
   variable: "--font-italiana",
@@ -30,7 +30,6 @@ export default function RootLayout({
     <html lang="fr" className={`${italiana.variable} ${manrope.variable}`}>
       <body className="font-sans antialiased text-foreground bg-background">
         {children}
-        <PromoPopup />
       </body>
     </html>
   );
