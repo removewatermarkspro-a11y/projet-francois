@@ -91,7 +91,7 @@ export function FeaturedServices() {
                                 </p>
 
                                 {/* Price Display - Modified layout */}
-                                <div className="flex items-center justify-end border-t border-gray-200 pt-4 mt-2">
+                                <div className="flex items-center justify-center md:justify-end border-t border-gray-200 pt-4 mt-2">
 
                                     <Link href="/services">
                                         <Button
