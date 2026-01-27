@@ -56,7 +56,7 @@ export function Header() {
                     {/* Logo - Made Bigger */}
                     <Link href="/" className="relative w-56 h-24 md:w-60 md:h-20 transition-transform hover:scale-105">
                         <Image
-                            src="/logo.png"
+                            src="/LOGO ENTIER.png"
                             alt="Nuage Nuage Nuage"
                             fill
                             className="object-contain object-left md:object-center" // Ensure alignment

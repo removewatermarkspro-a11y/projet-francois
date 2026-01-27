@@ -34,7 +34,7 @@ export default function ContactPage() {
                                 <MapPin className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Zone d'intervention</h3>
-                                    <p className="text-gray-600">Paris et banlieue<br />(Déplacement à domicile)</p>
+                                    <p className="text-gray-600 font-medium">Paris est et banlieue proche<br />(Déplacement à domicile)</p>
                                 </div>
                             </div>
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
                                 <Phone className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Téléphone</h3>
-                                    <p className="text-gray-600">06 99 42 04 64</p>
+                                    <p className="text-gray-600 font-medium">06 99 42 04 64</p>
                                 </div>
                             </div>
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
                                 <Mail className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Email</h3>
-                                    <p className="text-gray-600">nuagemassage1@gmail.com</p>
+                                    <p className="text-gray-600 font-medium">nuagemassage1@gmail.com</p>
                                 </div>
                             </div>
 
@@ -58,7 +58,7 @@ export default function ContactPage() {
                                 <Clock className="w-6 h-6 text-[#8F4626] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-900">Horaires</h3>
-                                    <p className="text-gray-600">Lundi - Samedi : 09h00 - 20h00<br />Dimanche : Fermé</p>
+                                    <p className="text-gray-600 font-medium">Jeudi, Vendredi et Samedi : 09h00 - 19h30</p>
                                 </div>
                             </div>
                         </div>

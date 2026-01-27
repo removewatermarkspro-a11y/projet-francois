@@ -65,12 +65,12 @@ export default function ServicesPage() {
       <Section className="bg-terre py-20 text-white">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-white/70 font-sans font-medium tracking-[0.2em] uppercase text-xs mb-4 block">
-            Notre Carte
+            Ma Carte
           </span>
           <h1 className="text-5xl md:text-6xl font-serif mb-6">
             Prestations Sur Mesure
           </h1>
-          <p className="text-lg text-white/90 font-light font-sans max-w-xl mx-auto">
+          <p className="text-lg text-white/90 font-medium font-sans max-w-xl mx-auto">
             Trois grands types de massage adaptés à vos besoins.
           </p>
         </div>
@@ -124,8 +124,7 @@ export default function ServicesPage() {
                 </p>
 
                 <div className="mt-auto border-t border-gray-100 pt-6">
-                  <div className="flex justify-between items-center text-[#2C2C2C] font-semibold font-sans mb-4">
-                    <span>A partir de 75€</span>
+                  <div className="flex justify-end items-center text-[#2C2C2C] font-semibold font-sans mb-4">
                     <Button
                       size="sm"
                       variant="ghost"
@@ -167,10 +166,10 @@ export default function ServicesPage() {
                   <div>
                     <h4 className="font-bold text-[#2C2C2C] mb-1 font-serif text-lg">Déplacement à domicile</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Je me déplace avec mon futon (ou sur votre table/tapis).
+                      Je me déplace avec mon futon (ou sur votre table/tapis de yoga).
                       <br />
-                      <span className="text-[#8F4626] font-bold mt-1 block text-base">+10 euros par déplacement.</span>
-                      <span className="text-xs text-gray-400 mt-2 block">Je ne reçois plus à mon domicile pour le moment.</span>
+                      <span className="text-[#8F4626] font-bold mt-1 block text-base">+10 euros de déplacement (si je dois ramener mon futon).</span>
+                      <span className="text-xs text-gray-500 font-medium mt-2 block">Je ne reçois plus à mon domicile pour le moment.</span>
                     </p>
                   </div>
                 </div>

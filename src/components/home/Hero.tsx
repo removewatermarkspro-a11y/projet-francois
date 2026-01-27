@@ -39,9 +39,9 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg md:text-xl text-white/90 mb-12 font-light max-w-2xl mx-auto tracking-wide font-sans"
+                    className="text-lg md:text-xl text-white/90 mb-12 font-medium max-w-2xl mx-auto tracking-wide font-sans"
                 >
-                    Nuage Massage : La légèreté retrouvée, au coeur de notre métier.
+                    Nuage Massage : La légèreté retrouvée, au coeur de mon métier.
                 </motion.p>
 
                 <motion.div
@@ -76,7 +76,7 @@ export function Hero() {
                 transition={{ delay: 1, duration: 2, repeat: Infinity }}
                 className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/70 flex flex-col items-center gap-2"
             >
-                <span className="text-[10px] uppercase tracking-[0.3em] font-light">Découvrir</span>
+                <span className="text-[10px] uppercase tracking-[0.3em] font-medium">Découvrir</span>
                 <div className="w-[1px] h-12 bg-white/40"></div>
             </motion.div>
         </section>

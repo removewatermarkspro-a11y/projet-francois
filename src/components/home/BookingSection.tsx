@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 
 export function BookingSection() {
     return (
-        <Section id="booking" className="bg-terre py-24">
+        <Section id="booking" className="bg-terre py-24 relative">
+            {/* Gradient Fade from previous section */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#EBE9E4] to-transparent pointer-events-none" />
             <div className="text-center max-w-3xl mx-auto mb-12">
                 <span className="text-white/70 font-sans font-medium tracking-[0.2em] uppercase text-xs mb-4 block">
                     Rendez-vous
@@ -15,7 +17,7 @@ export function BookingSection() {
                 <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">
                     Réservez votre instant
                 </h2>
-                <p className="text-white/80 font-sans font-light">
+                <p className="text-white/80 font-sans font-medium">
                     Un moment rien que pour vous.
                 </p>
             </div>

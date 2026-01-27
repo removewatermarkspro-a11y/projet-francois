@@ -33,7 +33,7 @@ const services = [
 
 export function FeaturedServices() {
     return (
-        <Section className="bg-[#FDFBF7] py-24 md:py-32">
+        <Section className="bg-[#FDFBF7] py-12 md:py-24">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header */}
@@ -91,19 +91,17 @@ export function FeaturedServices() {
                                 </p>
 
                                 {/* Price Display - Modified layout */}
-                                <div className="flex items-center justify-between border-t border-gray-200 pt-4 mt-2">
-                                    <div className="flex flex-col">
-                                        <span className="text-xs text-gray-400 font-sans uppercase tracking-wider">Durée & Tarif</span>
-                                        <div className="flex items-baseline gap-2 text-[#8F4626] font-serif text-lg">
-                                            <span className="font-semibold">{service.duration}</span>
-                                            <span className="text-gray-300">•</span>
-                                            <span className="font-semibold">{service.price}</span>
-                                        </div>
-                                    </div>
+                                <div className="flex items-center justify-end border-t border-gray-200 pt-4 mt-2">
 
                                     <Link href="/services">
-                                        <Button variant="ghost" className="p-0 hover:bg-transparent text-[#2C2C2C] hover:text-[#5A6C58] font-serif italic text-lg transition-colors">
-                                            En savoir plus
+                                        <Button
+                                            variant="outline"
+                                            className="group/btn relative px-6 py-5 border-[#8F4626] text-[#8F4626] hover:bg-[#8F4626] hover:text-white rounded-full font-serif text-sm tracking-widest uppercase transition-all duration-300"
+                                        >
+                                            <span className="relative z-10 flex items-center gap-2">
+                                                En savoir plus
+                                                <span className="group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
+                                            </span>
                                         </Button>
                                     </Link>
                                 </div>

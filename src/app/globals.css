@@ -13,7 +13,7 @@
   --color-offwhite: #FDFBF7;
 
   /* Fonts - Ensure these match layout.tsx variables */
-  --font-serif: var(--font-italiana), serif;
+  --font-serif: var(--font-jost), sans-serif;
   --font-sans: var(--font-manrope), sans-serif;
 
   --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
@@ -35,7 +35,6 @@
   h5,
   h6 {
     font-family: var(--font-serif) !important;
-    font-weight: 400;
   }
 
   /* Utility to use the Earth Texture */
