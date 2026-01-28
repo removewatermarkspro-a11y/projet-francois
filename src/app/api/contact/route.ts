@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
         const data = await resend.emails.send({
             from: 'Contact Site Francois <onboarding@resend.dev>',
-            to: ['allan.chemla@gmail.com'],
+            to: ['nuagemassage1@gmail.com'],
             subject: `Nouveau message de ${firstname} ${lastname}`,
             text: `
         Nouveau message reçu depuis le site :
