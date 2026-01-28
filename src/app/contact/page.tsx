@@ -1,11 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+        setError("");
+        setSuccess(false);
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            firstname: formData.get("firstname"),
+            lastname: formData.get("lastname"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+        };
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) throw new Error("Erreur lors de l'envoi");
+
+            setSuccess(true);
+            (e.target as HTMLFormElement).reset();
+        } catch (err) {
+            setError("Une erreur est survenue. Veuillez réessayer ou utiliser l'email direct.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <main className="min-h-screen flex flex-col pt-20">
             <Header />
@@ -84,30 +122,53 @@ export default function ContactPage() {
                         <h2 className="text-2xl font-serif font-bold text-gray-800 mb-8">
                             Envoyer un message
                         </h2>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label htmlFor="firstname" className="text-sm font-medium text-gray-700">Prénom</label>
-                                    <input type="text" id="firstname" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Jean" />
+                        {success ? (
+                            <div className="bg-green-50 text-green-800 p-6 rounded-lg text-center">
+                                <p className="font-bold text-xl mb-2">Message envoyé !</p>
+                                <p>Merci. Je vous répondrai dans les plus brefs délais.</p>
+                                <Button className="mt-6" onClick={() => setSuccess(false)}>Envoyer un autre message</Button>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-2">
+                                        <label htmlFor="firstname" className="text-sm font-medium text-gray-700">Prénom</label>
+                                        <input required name="firstname" type="text" id="firstname" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Jean" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label htmlFor="lastname" className="text-sm font-medium text-gray-700">Nom</label>
+                                        <input required name="lastname" type="text" id="lastname" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Dupont" />
+                                    </div>
                                 </div>
+
                                 <div className="space-y-2">
-                                    <label htmlFor="lastname" className="text-sm font-medium text-gray-700">Nom</label>
-                                    <input type="text" id="lastname" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Dupont" />
+                                    <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
+                                    <input required name="email" type="email" id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="jean.dupont@example.com" />
                                 </div>
-                            </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="jean.dupont@example.com" />
-                            </div>
+                                <div className="space-y-2">
+                                    <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
+                                    <textarea required name="message" id="message" rows={5} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Votre message..."></textarea>
+                                </div>
 
-                            <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" rows={5} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-400" placeholder="Votre message..."></textarea>
-                            </div>
+                                {error && (
+                                    <div className="text-red-600 text-sm bg-red-50 p-3 rounded">
+                                        {error}
+                                    </div>
+                                )}
 
-                            <Button className="w-full text-lg py-3">Envoyer</Button>
-                        </form>
+                                <Button disabled={loading} className="w-full text-lg py-3 flex items-center justify-center gap-2">
+                                    {loading ? (
+                                        <>
+                                            <Loader2 className="w-5 h-5 animate-spin" />
+                                            Envoi en cours...
+                                        </>
+                                    ) : (
+                                        "Envoyer"
+                                    )}
+                                </Button>
+                            </form>
+                        )}
                     </div>
                 </div>
             </Section>
@@ -116,3 +177,4 @@ export default function ContactPage() {
         </main>
     );
 }
+
