@@ -13,7 +13,7 @@
   --color-offwhite: #FDFBF7;
 
   /* Fonts - Ensure these match layout.tsx variables */
-  --font-serif: var(--font-jost), sans-serif;
+  --font-serif: var(--font-cormorant), serif;
   --font-sans: var(--font-manrope), sans-serif;
 
   --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
