@@ -126,12 +126,14 @@ export default function ServicesPage() {
                 <div className="mt-auto border-t border-gray-100 pt-6">
                   <div className="flex justify-end items-center text-[#2C2C2C] font-semibold font-sans mb-4">
                     <Button
-                      size="sm"
-                      variant="ghost"
-                      className="text-[#8F4626] hover:text-[#3E4B3D] p-0 hover:bg-transparent tracking-widest uppercase text-xs font-bold"
+                      variant="outline"
+                      className="group/btn relative px-8 py-6 border-[#8F4626] text-[#8F4626] hover:bg-[#8F4626] hover:text-white rounded-full font-serif text-sm tracking-widest uppercase transition-all duration-300 w-full md:w-auto"
                       onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
                     >
-                      Réserver
+                      <span className="relative z-10 flex items-center justify-center gap-3">
+                        Réserver
+                        <span className="group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
+                      </span>
                     </Button>
                   </div>
                 </div>
