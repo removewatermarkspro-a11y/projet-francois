@@ -44,7 +44,7 @@ export function FeaturedServices() {
                         viewport={{ once: true }}
                         className="text-[#8F4626] font-sans font-medium tracking-[0.2em] uppercase text-xs mb-4 block"
                     >
-                        Mes Soins
+                        Mes Massages
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}

@@ -21,7 +21,7 @@ export function TranquilitySection() {
                         <span className="block mt-2">rencontre le <span className="italic text-[#8F4626]">bien-être</span></span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-                        Avec une attention particulière portée à la relaxation et au rajeunissement,
+                        Avec une attention particulière portée à la relaxation et à l'apaisement,
                         je vous propose une variété de soins sur mesure pour restaurer l'équilibre
                         et l'harmonie de votre corps et de votre esprit.
                     </p>

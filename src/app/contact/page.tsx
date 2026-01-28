@@ -73,8 +73,8 @@ export default function ContactPage() {
                                 scrolling="no"
                                 marginHeight={0}
                                 marginWidth={0}
-                                src="https://maps.google.com/maps?q=Paris%2C%20France&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                                title="Carte Paris"
+                                src="https://maps.google.com/maps?q=Les%20Lilas%2C%20France&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                title="Carte Les Lilas"
                             ></iframe>
                         </div>
                     </div>
