@@ -35,7 +35,7 @@ export function Philosophy() {
                         Philosophie
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-8 leading-tight">
-                        Une approche <span className="text-[#A65D3D] italic">holistique</span> du soin
+                        Une approche <span className="text-[#A65D3D] italic">holistique</span> du massage
                     </h2>
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                         Tout le monde a un rapport unique à son corps, une problématique musculaire, des tensions ciblées,

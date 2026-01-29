@@ -17,12 +17,12 @@ export function TranquilitySection() {
                         Expérience Ultime
                     </span>
                     <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] mb-8 leading-tight">
-                        Où la tranquillité <br />
-                        <span className="block mt-2">rencontre le <span className="italic text-[#8F4626]">bien-être</span></span>
+                        Repos, bien-être, <br />
+                        <span className="block mt-2"><span className="italic text-[#8F4626]">équilibre</span></span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
                         Avec une attention particulière portée à la relaxation et à l'apaisement,
-                        je vous propose une variété de soins sur mesure pour restaurer l'équilibre
+                        je vous propose une variété de massages sur mesure pour restaurer l'équilibre
                         et l'harmonie de votre corps et de votre esprit.
                     </p>
                     <Link href="/about">
