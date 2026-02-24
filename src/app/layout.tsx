@@ -19,6 +19,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "François - Masseur Professionnel",
   description: "Massages bien-être et relaxation à domicile ou en cabinet.",
+  verification: {
+    google: "FkKLNTCWa2BlCZxWu5WkveV0SENrDO2Kclid228lHXo",
+  },
 };
 
 export default function RootLayout({
