@@ -17,8 +17,33 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "François - Masseur Professionnel",
-  description: "Massages bien-être et relaxation à domicile ou en cabinet.",
+  metadataBase: new URL("https://www.nuagemassage-paris.com"),
+  title: {
+    default: "Nuage Massage Paris | Masseur Professionnel à Domicile & Cabinet",
+    template: "%s | Nuage Massage Paris",
+  },
+  description: "Profitez d'un moment de détente absolu avec Nuage Massage Paris. François, masseur professionnel, vous propose des massages bien-être et sur mesure à Paris (à domicile ou en cabinet).",
+  keywords: ["Massage", "Paris", "Masseur Professionnel", "Bien-être", "Détente", "Massage à domicile", "Nuage Massage", "François Masseur"],
+  openGraph: {
+    title: "Nuage Massage Paris | Masseur Professionnel",
+    description: "Découvrez Nuage Massage à Paris. Des massages bien-être sur mesure, par François, pour un moment de relaxation profonde.",
+    url: "https://www.nuagemassage-paris.com",
+    siteName: "Nuage Massage Paris",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Nuage Massage Paris Logo",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   verification: {
     google: "FkKLNTCWa2BlCZxWu5WkveV0SENrDO2Kclid228lHXo",
   },
