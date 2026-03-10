@@ -32,7 +32,7 @@ export function Hero() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="text-5xl md:text-7xl lg:text-8xl font-serif font-normal text-white mb-6 leading-[1.1]"
                 >
-                    Se détendre sur un nuage <br /> <span className="italic">Comme sur un nuage</span>
+                    Se détendre <br /> <span className="italic">comme sur un nuage</span>
                 </motion.h1>
 
                 <motion.p
