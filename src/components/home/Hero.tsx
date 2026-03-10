@@ -32,7 +32,7 @@ export function Hero() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="text-5xl md:text-7xl lg:text-8xl font-serif font-normal text-white mb-6 leading-[1.1]"
                 >
-                    Se détendre <br /> sur un <span className="italic">nuage</span>
+                    Se détendre sur un nuage <br /> <span className="italic">Comme sur un nuage</span>
                 </motion.h1>
 
                 <motion.p
@@ -41,7 +41,7 @@ export function Hero() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-white/90 mb-12 font-medium max-w-2xl mx-auto tracking-wide font-sans"
                 >
-                    Nuage Massage : La légèreté retrouvée, au coeur de mon métier.
+                    Un moment dédié à votre détente.
                 </motion.p>
 
                 <motion.div

@@ -20,12 +20,10 @@ export function SpecialistSection() {
                         Votre Praticien
                     </span>
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#2C2C2C] mb-8 leading-[1.1]">
-                        Votre bien-être <br /> entre des mains <span className="text-[#8F4626]">expertes</span>
+                        Prendre un temps <br /> pour <span className="text-[#8F4626]">vous</span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-medium leading-relaxed max-w-md">
-                        Avec des années d'expérience et une passion pour le bien-être,
-                        je mets à votre service une expertise qualifiée dans une variété
-                        de techniques thérapeutiques.
+                        Mon expérience et ma passion pour le bien-être me permettent de mettre à votre service une pratique qualifiée au travers d’une large variété de techniques.
                     </p>
 
                     <Link href="/about">

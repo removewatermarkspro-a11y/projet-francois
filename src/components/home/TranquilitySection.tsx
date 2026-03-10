@@ -17,13 +17,11 @@ export function TranquilitySection() {
                         Expérience Ultime
                     </span>
                     <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] mb-8 leading-tight">
-                        Repos, bien-être, <br />
+                        Repos, accompagnement sportif, bien-être, <br />
                         <span className="block mt-2"><span className="italic text-[#8F4626]">équilibre</span></span>
                     </h2>
                     <p className="text-gray-600 mb-10 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-                        Avec une attention particulière portée à la relaxation et à l'apaisement,
-                        je vous propose une variété de massages sur mesure pour restaurer l'équilibre
-                        et l'harmonie de votre corps et de votre esprit.
+                        Avec une attention particulière portée à l’apaisement de vos tensions, je vous propose une variété de massages sur mesure pour vous permettre un moment de repos et de récupération physique et mentale.
                     </p>
                     <Link href="/about">
                         <Button className="bg-gradient-to-r from-[#8F4626] to-[#A65D3D] hover:from-[#7A3A1E] hover:to-[#8F4626] text-white rounded-full px-10 py-6 text-lg shadow-lg">

@@ -53,6 +53,9 @@ export default function AboutPage() {
                                 Issu d’un parcours en géopolitique et sciences sociales, j’ai commencé ma vie professionnelle en milieu associatif pour naturellement me porter sur le massage et développer une autre forme de suivi, d’attention et de mieux-être individuel.
                             </p>
                             <p>
+                                Ma pratique technique des massages traditionnels est consciente et éclairée sur leur origine et leur portée culturelle. J’en fait l’usage partiel lors de certaines de mes séances mais je ne suis en aucun cas détenteur ou représentant des cultures auxquelles j’emprunte ces savoirs. La culture indienne, japonaise et thaïlandaise auxquelles je fais référence notamment, ont développé une approche du massage centenaire et très complexe. Je vous invite à vous renseigner sur le sujet s’il vous intéresse.
+                            </p>
+                            <p>
                                 Je souhaite amener les personnes que je suis lors de mes séances vers une écoute lucide et bienveillante de leurs besoins. Une approche humble et pertinente sur l’attention que l’on peut porter à son propre corps et à sa détente.
                             </p>
                         </div>

@@ -78,7 +78,7 @@ export function ReviewsSection() {
 
             <div className="container mx-auto px-4 mb-16 text-center">
                 <h2 className="text-4xl md:text-5xl font-serif text-[#2C2C2C] mb-4">
-                    Vos mots doux
+                    Vos avis
                 </h2>
                 <p className="text-gray-500 uppercase tracking-widest text-xs">
                     Témoignages de mes clients

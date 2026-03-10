@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Heart, Sparkles, Zap } from "lucide-react"; // Selected icons
+import { Heart, Sparkles, Zap, Flower2 } from "lucide-react"; // Selected icons
 import { BookingSection } from "@/components/home/BookingSection";
 
 // Updated Service Categories
@@ -15,7 +15,7 @@ const serviceCategories = [
   {
     title: "Massage Musculaire",
     description: "Musculaire, récupération sportive, apaisement des tensions et nœuds, traitement des fascias, souplesse et libération articulaire, accompagnement sportif, drainage musculaire.",
-    pricing: "75€ / 90€ / 105€",
+    pricing: "80€ / 95€ / 110€",
     duration: "1h / 1h15 / 1h30",
     image: "/service-1.jpg", // Using existing images remapped
     icon: Zap
@@ -23,7 +23,7 @@ const serviceCategories = [
   {
     title: "Massage Relaxant",
     description: "Relaxant, enveloppement, détente psychique et mentale, focus sur le lâcher prise et la restauration du capital fatigue, apaisement du stress et des angoisses.",
-    pricing: "75€ / 90€ / 105€",
+    pricing: "80€ / 95€ / 110€",
     duration: "1h / 1h15 / 1h30",
     image: "/service-2.jpg",
     icon: Heart
@@ -31,29 +31,35 @@ const serviceCategories = [
   {
     title: "Massage Énergétique",
     description: "Énergétique, rééquilibrage énergétique, drainage des toxines, meilleure circulation sanguine et oxygénation du corps.",
-    pricing: "75€ / 90€ / 105€",
+    pricing: "80€ / 95€ / 110€",
     duration: "1h / 1h15 / 1h30",
     image: "/service-3.jpg",
     icon: Sparkles
+  },
+  {
+    title: "Massage du visage Kobido",
+    description: "Raffermissement des tissus, effet anti-âge, revitalisation, circulation sanguine améliorée.",
+    pricing: "80€ / 95€ / 110€",
+    duration: "1h / 1h15 / 1h30",
+    image: "/service-5.jpg",
+    icon: Flower2
   }
 ];
 
 // Techniques List
 const techniques = [
   "Californien", "Suédois", "Thaïlandais traditionnel", "Réflexologie plantaire",
-  "Prénatal", "Deep tissu", "Abhyanga", "Drainage"
+  "Prénatal", "Deep tissue", "Abhyanga", "Drainage", "Kobido Shiatsu"
 ];
 
 const pricings = [
-  { duration: "1h", price: "75€" },
-  { duration: "1h15", price: "90€" },
-  { duration: "1h30", price: "105€" },
+  { duration: "1h", price: "80€" },
+  { duration: "1h15", price: "95€" },
+  { duration: "1h30", price: "110€" },
 ];
 
 const packages = [
-  { duration: "3h", price: "200€", unite: "67€/h" },
-  { duration: "5h", price: "320€", unite: "64€/h" },
-  { duration: "7h", price: "425€", unite: "61€/h" },
+  { duration: "3h", price: "210€", unite: "70€/h" }
 ];
 
 export default function ServicesPage() {
@@ -80,11 +86,11 @@ export default function ServicesPage() {
       <Section className="py-12 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-500 font-sans text-sm uppercase tracking-widest mb-4">Sur la base des techniques suivantes</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[#8F4626] font-serif text-xl">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 text-[#8F4626] font-serif text-2xl md:text-3xl font-bold">
             {techniques.map((tech, i) => (
               <span key={i} className="relative">
                 {tech}
-                {i < techniques.length - 1 && <span className="ml-6 text-gray-300">•</span>}
+                {i < techniques.length - 1 && <span className="ml-6 text-gray-300 font-normal">•</span>}
               </span>
             ))}
           </div>
@@ -168,10 +174,9 @@ export default function ServicesPage() {
                   <div>
                     <h4 className="font-bold text-[#2C2C2C] mb-1 font-serif text-lg">Déplacement à domicile</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Je me déplace avec mon futon (ou sur votre table/tapis de yoga).
+                      Avec mon futon (+10 euros de déplacement) ou votre table de massage / futon ou tapis de yoga rembourré).
                       <br />
-                      <span className="text-[#8F4626] font-bold mt-1 block text-base">+10 euros de déplacement (si je dois ramener mon futon).</span>
-                      <span className="text-xs text-gray-500 font-medium mt-2 block">Je ne reçois plus à mon domicile pour le moment.</span>
+                      <span className="text-xs text-[#8F4626] font-bold mt-2 block">Je ne reçois plus à mon domicile pour le moment.</span>
                     </p>
                   </div>
                 </div>
