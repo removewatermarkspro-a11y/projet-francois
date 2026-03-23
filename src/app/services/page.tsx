@@ -41,15 +41,14 @@ const serviceCategories = [
     description: "Raffermissement des tissus, effet anti-âge, revitalisation, circulation sanguine améliorée.",
     pricing: "80€ / 95€ / 110€",
     duration: "1h / 1h15 / 1h30",
-    image: "/service-5.jpg",
+    image: "https://images.pexels.com/photos/3997983/pexels-photo-3997983.jpeg",
     icon: Flower2
   }
 ];
 
-// Techniques List
 const techniques = [
   "Californien", "Suédois", "Thaïlandais traditionnel", "Réflexologie plantaire",
-  "Prénatal", "Deep tissue", "Abhyanga", "Drainage", "Kobido Shiatsu"
+  "Prénatal", "Deep tissue", "Abhyanga", "Drainage", "Kobido", "Shiatsu"
 ];
 
 const pricings = [
@@ -77,7 +76,7 @@ export default function ServicesPage() {
             Prestations Sur Mesure
           </h1>
           <p className="text-lg text-white/90 font-medium font-sans max-w-xl mx-auto">
-            Trois grands types de massage adaptés à vos besoins.
+            Quatre grands types de massage adaptés à vos besoins.
           </p>
         </div>
       </Section>
