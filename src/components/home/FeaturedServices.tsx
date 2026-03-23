@@ -29,6 +29,13 @@ const services = [
         duration: "1h à 1h30",
         image: "/service-5.jpg",
     },
+    {
+        title: "Massage du visage Kobido",
+        description: "Raffermissement des tissus, effet anti-âge, revitalisation, circulation sanguine améliorée.",
+        price: "Dès 75€",
+        duration: "1h à 1h30",
+        image: "https://images.pexels.com/photos/3997983/pexels-photo-3997983.jpeg",
+    },
 ];
 
 export function FeaturedServices() {
@@ -58,7 +65,7 @@ export function FeaturedServices() {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
